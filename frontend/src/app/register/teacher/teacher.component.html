@@ -1,0 +1,59 @@
+<div class="bgComponent">
+  <div class="form">
+    <mat-card class="card">
+      <mat-card-title>Register teacher </mat-card-title>
+      <mat-card-content>
+        <div class="container">
+          <mat-form-field>
+            <input matInput placeholder="Name and lastname" required />
+          </mat-form-field>
+          <mat-form-field>
+            <input type="email" matInput placeholder="Email" required />
+          </mat-form-field>
+          <mat-form-field>
+            <input type="password" matInput placeholder="Password" required />
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Address</mat-label>
+            <textarea matInput placeholder="Cra 77 IBis"></textarea>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Telephone</mat-label>
+            <span matPrefix>+52 &nbsp;</span>
+            <input type="tel" matInput placeholder="3227964514" />
+          </mat-form-field>
+
+          <table class="example-full-width" cellspacing="0"><tr>
+            <td><mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>City</mat-label>
+              <input matInput placeholder="Ex. Colombia">
+            </mat-form-field></td>
+            <td><mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>State</mat-label>
+              <input matInput placeholder="Ex. Bogota">
+            </mat-form-field></td>
+
+          </tr></table>
+
+
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label> capacities and aptitudes in class subjects</mat-label>
+            <input
+              matInput
+              #message
+              maxlength="256"
+              placeholder="Ex. I need help with..."
+            />
+            <mat-hint align="start"
+              ><strong>Don't disclose personal info</strong>
+            </mat-hint>
+            <mat-hint align="end">{{ message.value.length }} / 256</mat-hint>
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button class="button colorButton" mat-raised-button>Register</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

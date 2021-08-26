@@ -1,0 +1,48 @@
+<div class="bgComponent">
+    <div class="form">
+      <mat-card class="card">
+        <mat-card-title>Register matter </mat-card-title>
+        <mat-card-content>
+          <div class="container">
+
+            <mat-form-field>
+              <input matInput placeholder="Cod Student" required />
+            </mat-form-field>
+
+
+            <mat-radio-group aria-label="Select an option">
+              <mat-radio-button value="1">night schedule  </mat-radio-button>
+              <mat-radio-button value="2">daytime schedule  </mat-radio-button>
+            </mat-radio-group>
+
+
+            <mat-selection-list #shoes>
+              <mat-list-option *ngFor="let shoe of typesOfShoes">
+                {{shoe}}
+              </mat-list-option>
+            </mat-selection-list>
+            
+            <p>
+              Options selected: {{shoes.selectedOptions.selected.length}}
+            </p>
+
+
+
+
+
+        </div>
+
+
+
+
+        </mat-card-content>
+        <mat-card-actions>
+          <button class="button colorButton" mat-raised-button>Register</button>
+        </mat-card-actions>
+      </mat-card>
+
+
+
+    </div>
+  </div>
+  
