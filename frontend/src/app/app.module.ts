@@ -12,8 +12,16 @@ import { MatterComponent } from './register/matter/matter.component';
 import { CourseComponent } from './register/course/course.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { StudentService } from "./services/student.service";
+import { CourseService } from "./services/course.service";
+import { TeacherService } from "./services/teacher.service";
+import { TokenInterceptorService } from "./services/token-interceptor.service";
+import { AuthGuard } from "./guard/auth.guard";
+
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -50,7 +58,7 @@ import { MatRadioModule } from '@angular/material/radio';
     MatListModule,
     MatRadioModule,
   ],
-  providers: [],
+  providers: [StudentService,CourseService,TeacherService,TokenInterceptorService,AuthGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
